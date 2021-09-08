@@ -11,4 +11,8 @@ Executable takes following parameters:
   6. RNG seed
   7. Delay between frames ms
   9. Initial population density 0.0 - 1.0
-  
+## Example
+`Main.exe 50 50 10 10000 B3/S23 2 20 0.5`
+Launches 50x50 game of life on 10 threads with ~50% of cells alive at the start, running for 10000 steps
+where dead cells with 3 neighbors become alive, and only cells with 2 or 3 neighbors survive.
+RNG is initialized with seed `2`, and program waits for 20 ms after each frame, resulting in about 50 FPS
