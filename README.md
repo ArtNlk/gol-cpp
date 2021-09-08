@@ -16,3 +16,5 @@ Executable takes following parameters:
 Launches 50x50 game of life on 10 threads with ~50% of cells alive at the start, running for 10000 steps
 where dead cells with 3 neighbors become alive, and only cells with 2 or 3 neighbors survive.
 RNG is initialized with seed `2`, and program waits for 20 ms after each frame, resulting in about 50 FPS
+### Additional info
+Due to cout console output, a delay of at least 1 is recommended for stable visuals
