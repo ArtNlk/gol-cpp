@@ -113,7 +113,7 @@ short Board::neighborCountAt(unsigned int row, unsigned int col) {
         {
             if(colOffset == 0 && rowOffset == 0){continue;}
             colIndex = col+colOffset;
-            if(colIndex < 0 || colIndex >= rowCount) {continue;}
+            if(colIndex < 0 || colIndex >= colCount) {continue;}
             if(this->at(rowIndex,colIndex)){neighborCount++;}
         }
     }
@@ -127,9 +127,9 @@ std::string Board::toCoutString(char aliveChar, char deadChar) {
     {
         for(int colIndex = 0; colIndex < colCount; colIndex++)
         {
-            if(data[rowIndex*colCount + colIndex]){output[rowIndex*colCount+colIndex] = aliveChar;}
+            if(data[rowIndex*colCount + colIndex]){output[rowIndex*colCount+colIndex + rowIndex] = aliveChar;}
         }
-        output[rowIndex*colCount] = '\n';
+        output[rowIndex*colCount + colCount +rowIndex] = '\n';
     }
 
     return output;

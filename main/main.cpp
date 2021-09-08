@@ -137,7 +137,6 @@ void onCompletion()
     static const void* stdHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     GetConsoleScreenBufferInfo((HANDLE)stdHandle, &csbi);
-    //int width = (csbi.srWindow.Right-csbi.srWindow.Left+1);
     int height = (csbi.srWindow.Bottom-csbi.srWindow.Top+1);
     std::string clsString(height,'\n');
     std::cout << clsString;
